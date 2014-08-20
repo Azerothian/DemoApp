@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <link href="Content/bootstrap.min.css" rel="stylesheet" />
+  <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+  <style>
+    .required:after {
+      color: red;
+      content: " *";
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <form id="frmOrder" class="form-horizontal" role="form">
+          <div class="errorMessages"></div>
+          <fieldset>
+            <legend>Tickets</legend>
+            <div class="form-group">
+              <label class="col-sm-3 control-label required" for="ddlTicketValue">Ticket Value</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <select id="ddlTicketValue" name="TicketValue" class="form-control">
+                    <option value="">--- Please Select ---</option>
+                    <option value="T5">5</option>
+                    <option value="T10">10</option>
+                    <option value="T20">20</option>
+                    <option value="T50">50</option>
+                    <option value="T100">100</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>User Information</legend>
+            <div class="form-group">
+              <label class="col-sm-3 control-label required" for="txtFirstName">First Name</label>
+              <div class="col-sm-9">
+                <input type="text" id="txtFirstName" name="FirstName" placeholder="First Name" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label required" for="txtLastName">Last Name</label>
+              <div class="col-sm-9">
+                <input type="text" id="txtLastName" name="LastName" placeholder="Last Name" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label required" for="txtEmail">Email Address</label>
+              <div class="col-sm-9">
+                <input type="text" id="txtEmail" name="Email" placeholder="Email Address" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3 control-label" for="txtPhoneNumber">Phone Number</label>
+              <div class="col-sm-9">
+                <input type="text" placeholder="Phone Number" id="txtPhoneNumber" name="PhoneNumber" class="form-control">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Payment Details</legend>
+            <div class="form-group">
+              <label class="col-sm-3 control-label required" for="txtCreditCardNumber">Credit Card Number</label>
+              <div class="col-sm-9">
+                <input type="text" id="txtCreditCardNumber" name="CreditCardNumber" placeholder="Credit Card Number" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="pull-right">
+                  <button type="submit" id="btnSubmit" class="btn btn-primary">Purchase</button>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <h3>Submitted Data</h3>
+    </div>
+    <div class="row">
+      <div class="table-responsive">
+        <table class="tblData table table-striped">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Ticket Value</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Credit Card Number</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="Scripts/jquery-1.9.0.min.js"></script>
+  <script src="Scripts/lodash.min.js"></script>
+  <script src="Scripts/bluebird.js"></script>
+  <script src="Scripts/create-error.js"></script>
+  <script src="Scripts/checkit.js"></script>
+  <script src="Scripts/datalist.min.js"></script>
+  <script src="Scripts/validation.min.js"></script>
+  <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>
