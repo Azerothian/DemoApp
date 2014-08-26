@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace DemoApp.Models
+namespace TicketPurchaseDemo.Models
 {
-    public class DemoAppContext : DbContext
+    public class TicketPurchaseDemoContext : DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -15,11 +15,11 @@ namespace DemoApp.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public DemoAppContext() : base("name=DemoAppContext")
+        public TicketPurchaseDemoContext() : base("name=TicketPurchaseDemoContext")
         {
         }
 
-        public System.Data.Entity.DbSet<DemoApp.Models.Order> Orders { get; set; }
+        public System.Data.Entity.DbSet<TicketPurchaseDemo.Models.Order> Orders { get; set; }
     
     }
 }

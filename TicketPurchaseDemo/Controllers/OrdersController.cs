@@ -9,13 +9,13 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using DemoApp.Models;
+using TicketPurchaseDemo.Models;
 
-namespace DemoApp.Controllers
+namespace TicketPurchaseDemo.Controllers
 {
   public class OrdersController : ApiController
   {
-    private DemoAppContext db = new DemoAppContext();
+    private TicketPurchaseDemoContext db = new TicketPurchaseDemoContext();
 
     // GET: api/Orders
     public IQueryable<Order> GetOrders()
